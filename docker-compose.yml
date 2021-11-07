@@ -2,10 +2,9 @@ version: '3'
 services:
   geth:
     image: ethereum/client-go
-    command: --http --http.addr="0.0.0.0" --ws --ws.addr="0.0.0.0"
+    command: --http --http.addr="0.0.0.0" --dev
     volumes:
       - ~/.docker/data/ethereum-dev:/root/.ethereum
     ports:
       - "30303:30303"
       - "8545:8545"
-      - "8546:8546"
